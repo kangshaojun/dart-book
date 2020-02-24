@@ -1,4 +1,4 @@
-# dart-book
+# Dart课程
 
 图书内容同步课程：https://ke.qq.com/course/package/23950?tuin=2c77f7f0
 
@@ -39,7 +39,7 @@ QQ:283796665
 微信:kangshaojun888
 
 # 图书封面
-<img src="https://raw.githubusercontent.com/kangshaojun/flutter-book/master/screenshots/book_cover.png"/>
+<img src="https://raw.githubusercontent.com/kangshaojun/dart-book/master/screenshots/book_cover.png"/>
 
 
 
