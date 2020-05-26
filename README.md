@@ -1,20 +1,6 @@
-# Dart课程
+# 视频课程
 
-图书内容同步课程：https://ke.qq.com/course/package/23950?tuin=2c77f7f0
-
-Dart基础教程 https://ke.qq.com/course/513743?tuin=2c77f7f0<br>
-Dart高级教程 https://ke.qq.com/course/554150?tuin=2c77f7f0<br>
-Dart商城案例 https://ke.qq.com/course/482529?tuin=2c77f7f0<br>
-
-# Flutter课程
-
-Flutter基础教程 https://ke.qq.com/course/515987?tuin=2c77f7f0<br>
-Flutter高级教程 https://ke.qq.com/course/518848?tuin=2c77f7f0<br>
-Flutter实战案例 https://ke.qq.com/course/576887?tuin=2c77f7f0<br>
-
-# Flutter+Dart课程
-
-Flutter+Dart入门与实战套餐(全) https://ke.qq.com/course/package/23972?tuin=2c77f7f0<br>
+视频课程：https://flutter.ke.qq.com/
 
 # 如何使用
 
