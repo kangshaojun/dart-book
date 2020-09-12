@@ -1,0 +1,37 @@
+name: flutter_shop
+description: Flutter电子商城.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #苹果风格图标
+  cupertino_icons: ^0.1.2
+  #轮播组件
+  flutter_swiper: ^1.1.4
+  #屏幕适配
+  flutter_screenutil: ^0.5.1
+  #刷新组件
+  flutter_easyrefresh: ^1.2.7
+  #提示信息组件
+  fluttertoast: ^3.0.1
+  #展示Html组件
+  flutter_html: ^0.9.6
+  #本地存储
+  shared_preferences: ^0.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+  #图片资源
+  assets:
+    - assets/images/head.jpeg
+    - assets/images/head_bg.png
