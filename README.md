@@ -12,7 +12,7 @@
 
 4. 执行flutter packages get后，运行项目即可
 
-5. 如果下载不下来可以使用网盘: 链接:https://pan.baidu.com/s/1rUilSDlDZGYCLjQznbc4pg  密码:j7f1
+5. 百度网盘dart-book-v1.0 链接:https://pan.baidu.com/s/1rUilSDlDZGYCLjQznbc4pg  密码:j7f1
 
 
 # 作者简介
