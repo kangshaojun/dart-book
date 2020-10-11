@@ -1,3 +1,4 @@
+//path/main.dart文件
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -7,11 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CustomPaint绘制圆弧示例',
+      title: 'CustomPaint绘制路径示例',
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'CustomPaint绘制圆弧示例',
+            'CustomPaint绘制路径示例',
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -35,21 +36,19 @@ class LinePainter extends CustomPainter {
     ..color = Colors.grey
     ..strokeCap = StrokeCap.round
     ..isAntiAlias = true
-    ..strokeWidth = 2.0//画笔粗细
+    ..strokeWidth = 2.0 //画笔粗细
     ..style = PaintingStyle.stroke; //用于绘制点时PaintingStyle值无效
 
   //重写绘制内容方法
   @override
   void paint(Canvas canvas, Size size) {
-    //绘制圆弧
-    const PI = 3.1415926;
-    //定义矩形
-    Rect rect1 = Rect.fromCircle(center: Offset(100.0, 0.0), radius: 100.0);
-    //画1/2PI弧度的圆弧
-    canvas.drawArc(rect1, 0.0, PI / 2, true, _paint);
-    //画PI弧度的圆弧
-    Rect rect2 = Rect.fromCircle(center: Offset(200.0, 150.0), radius: 100.0);
-    canvas.drawArc(rect2, 0.0, PI, true, _paint);
+    //新建一个path移动到一个位置，然后画各种线
+    Path path = Path()..moveTo(100.0, 100.0);
+    path.lineTo(200.0, 300.0);
+    path.lineTo(100.0, 200.0);
+    path.lineTo(150.0, 250.0);
+    path.lineTo(150.0, 500.0);
+    canvas.drawPath(path, _paint);
   }
 
   //是否需要重绘

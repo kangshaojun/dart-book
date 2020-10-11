@@ -1,16 +1,18 @@
+//points/main.dart文件
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CustomPaint绘制嵌套矩形示例',
+      title: 'CustomPaint绘制多个点示例',
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'CustomPaint绘制嵌套矩形示例',
+            'CustomPaint绘制多个点示例',
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -21,8 +23,7 @@ class MyApp extends StatelessWidget {
               child: CustomPaint(
                 painter: LinePainter(),
               ),
-            )
-        ),
+            )),
       ),
     );
   }
@@ -30,26 +31,31 @@ class MyApp extends StatelessWidget {
 
 //继承于CustomPainter并且实现CustomPainter里面的paint和shouldRepaint方法
 class LinePainter extends CustomPainter {
-
   //定义画笔
   Paint _paint = Paint()
     ..color = Colors.grey
-    ..strokeCap = StrokeCap.square
+    ..strokeCap = StrokeCap.round//StrokeCap.round为圆点 StrokeCap.square为方形
     ..isAntiAlias = true
-    ..strokeWidth = 3.0
-    ..style = PaintingStyle.stroke;//画笔样式有填充PaintingStyle.fill及没有填充PaintingStyle.stroke两种
+    ..strokeWidth = 20.0//画笔粗细 值调大点 这样点看起来明显一些
+    ..style = PaintingStyle.fill; //用于绘制点时PaintingStyle值无效
 
-  ///重写绘制内容方法
+  //重写绘制内容方法
   @override
   void paint(Canvas canvas, Size size) {
+    //绘制点
+    canvas.drawPoints(
 
-    //初始化两个矩形
-    Rect rect1 = Rect.fromCircle(center: Offset(150.0, 150.0), radius: 80.0);
-    Rect rect2 = Rect.fromCircle(center: Offset(150.0, 150.0), radius: 40.0);
-    //再把这两个矩形转化成圆角矩形
-    RRect outer = RRect.fromRectAndRadius(rect1, Radius.circular(20.0));
-    RRect inner = RRect.fromRectAndRadius(rect2, Radius.circular(10.0));
-    canvas.drawDRRect(outer, inner, _paint);
+      //PointMode的枚举类型有三个，points点，lines隔点连接线，polygon相邻连接线
+        PointMode.points,
+        [
+          Offset(50.0, 60.0),
+          Offset(40.0, 90.0),
+          Offset(100.0, 100.0),
+          Offset(300.0, 350.0),
+          Offset(400.0, 80.0),
+          Offset(200.0, 200.0),
+        ],
+        _paint..color = Colors.grey);
   }
 
   //是否需要重绘

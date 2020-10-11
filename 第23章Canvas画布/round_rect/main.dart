@@ -1,3 +1,4 @@
+//round_rect/main.dart文件
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -6,11 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CustomPaint绘制圆示例',
+      title: 'CustomPaint绘制圆角矩形示例',
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'CustomPaint绘制圆示例',
+            'CustomPaint绘制圆角矩形示例',
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
                 painter: LinePainter(),
                 child: Center(
                   child: Text(
-                    '绘制圆',
+                    '绘制圆角矩形',
                     style: const TextStyle(
-                      fontSize: 38.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
                     ),
@@ -49,14 +50,19 @@ class LinePainter extends CustomPainter {
     ..strokeWidth = 3.0
     ..style = PaintingStyle.stroke;//画笔样式有填充PaintingStyle.fill及没有填充PaintingStyle.stroke两种
 
-  //重写绘制内容方法
+  ///重写绘制内容方法
   @override
   void paint(Canvas canvas, Size size) {
-    //绘制圆 参数为中心点，半径，画笔
-    canvas.drawCircle(Offset(200.0, 150.0), 150.0, _paint);
+
+    //中心点坐标为200,200 边长为100
+    Rect rect = Rect.fromCircle(center: Offset(200.0, 200.0), radius: 100.0);
+    //根据矩形创建一个角度为10的圆角矩形
+    RRect rrect = RRect.fromRectAndRadius(rect, Radius.circular(20.0));
+    //开始绘制圆角矩形
+    canvas.drawRRect(rrect, _paint);
   }
 
-  //重写是否需要重绘的
+  ///是否需要重绘
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return false;
