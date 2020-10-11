@@ -1,3 +1,4 @@
+//sqflite/lib/client.dart文件
 //客户数据模型类
 class Client {
   //id
