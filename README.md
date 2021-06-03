@@ -1,6 +1,7 @@
 # 视频课程
 
-Flutter+Dart入门与实战套餐(全) https://ke.qq.com/course/package/23970?tuin=2c77f7f0<br>
+[Flutter视频教程请点击这里](http://www.kangshaojun.com/)
+<br>
 
 # 如何使用
 
