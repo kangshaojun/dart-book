@@ -2,7 +2,7 @@
 
 Flutter Dart 基础 高级 商城案例 插件开发等课程请关注<br>
 [https://www.kangshaojun.com](https://www.kangshaojun.com)<br>
-[![](https://raw.githubusercontent.com/kangshaojun/dart-book/master/screenshots/study.png)](https://www.kangshaojun.com/posts/courses/)
+[![](https://www.kangshaojun.com/images/study.png)](https://www.kangshaojun.com/posts/courses/)
 <br>
 
 
